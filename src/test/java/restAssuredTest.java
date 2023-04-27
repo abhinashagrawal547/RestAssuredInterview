@@ -1,7 +1,13 @@
 import org.junit.Test;
 
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+
 import static io.restassured.RestAssured.*;
+
+import java.util.List;
+
 import org.json.simple.JSONObject;
 
 public class restAssuredTest {
@@ -9,17 +15,47 @@ public class restAssuredTest {
 	@Test 
 	public void getRequest() 
 	{
-		baseURI	=	"http://localhost:3000/";
+//		baseURI	=	"http://localhost:3000/";
+//		
+//		given()
+//			.contentType(ContentType.JSON)
+//			.accept(ContentType.JSON)
+//		.when()
+//			.delete("/users/5")
+//		.then()
+//			.assertThat().statusCode(200)
+//		.log().all();
 		
-		given()
-			.contentType(ContentType.JSON)
-			.accept(ContentType.JSON)
-		.when()
-			.delete("/users/5")
-		.then()
-			.assertThat().statusCode(200)
-		.log().all();
-			
+		
+		
+		baseURI = "http://localhost:3000/";
+		JSONObject obj = new JSONObject();
+		obj.put("firstname", "Hareesh");
+		
+		given().contentType(ContentType.JSON)
+				.accept(ContentType.JSON)
+				.body(obj.toString())
+				.when().patch("/users/1")
+				.then().statusCode(200).log().all();
+		
+		
+//		baseURI = "http://localhost:3000/";
+//
+//		JSONObject obj = new JSONObject();
+//		obj.put("firstname", "Hareesh");
+//		obj.put("lastname", "Patjee");
+//		obj.put("subjectId", 3);
+//		obj.put("id", 7);
+//
+//		given().
+//		contentType(ContentType.JSON).
+//		accept(ContentType.JSON).
+//		body(obj.toString()).
+//		when().
+//		post("/users").
+//		then().
+//		statusCode(201).
+//		log().all();
 		
 		//Good examples of accessing json response
 		//https://javadoc.io/doc/io.rest-assured/rest-assured/3.0.5/io/restassured/response/ResponseBodyExtractionOptions.html
