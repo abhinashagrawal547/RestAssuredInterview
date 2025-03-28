@@ -1,0 +1,7 @@
+1/ Install node.js if not already installed
+2/ Verify the node version using node -v, it should return a version
+3/ npm install json-server
+4/ create a db.json or use the one present in the artifacts
+5/ usng cmd, move to the location where db.json is present and then run 'npx json-server db.json'
+6/ JSON server should get started. 
+7/ json-server --help

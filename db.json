@@ -1,0 +1,71 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "title": "title 6",
+      "views": "5000"
+    },
+    {
+      "id": "4",
+      "title": "title 4",
+      "views": "6000"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "firstname": "Guna",
+      "id": "1",
+      "salary": "25000",
+      "lastname": "Bhara"
+    },
+    {
+      "id": "ca2b",
+      "firstname": "Abhinash",
+      "salary": "10000",
+      "lastname": "Agrawal"
+    },
+    {
+      "id": "2",
+      "firstname": "Tara",
+      "salary": "40000",
+      "lastname": "Bhushan"
+    },
+    {
+      "id": "2",
+      "firstname": "Tara",
+      "salary": "40000",
+      "lastname": "Bhushan"
+    },
+    {
+      "id": "2",
+      "firstname": "Tara",
+      "salary": "40000",
+      "lastname": "Bhushan"
+    }
+  ]
+}

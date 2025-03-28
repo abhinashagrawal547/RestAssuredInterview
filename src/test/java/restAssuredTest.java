@@ -1,13 +1,6 @@
 import org.junit.Test;
-
 import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
-import io.restassured.response.Response;
-
 import static io.restassured.RestAssured.*;
-
-import java.util.List;
-
 import org.json.simple.JSONObject;
 
 public class restAssuredTest {
@@ -30,13 +23,16 @@ public class restAssuredTest {
 		
 		baseURI = "http://localhost:3000/";
 		JSONObject obj = new JSONObject();
-		obj.put("firstname", "Hareesh");
+		obj.put("title", "title 6");
 		
-		given().contentType(ContentType.JSON)
-				.accept(ContentType.JSON)
-				.body(obj.toString())
-				.when().patch("/users/1")
-				.then().statusCode(200).log().all();
+		given().contentType(ContentType.JSON).accept(ContentType.JSON)
+			.body(obj.toString()).when().patch("/posts/3").then().statusCode(200);
+		
+//		given().contentType(ContentType.JSON)
+//				.accept(ContentType.JSON)
+//				.body(obj.toString())
+//				.when().patch("/3")
+//				.then().statusCode(200).log().all();
 		
 		
 //		baseURI = "http://localhost:3000/";
